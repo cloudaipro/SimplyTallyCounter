@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import RxSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    private let disposeBag = DisposeBag()
+    static var bLoadedGADMobileAds: BehaviorSubject<Bool> = BehaviorSubject(value: false)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.sharedInstance().start { status  in
+            //print(status)
+            AppDelegate.bLoadedGADMobileAds.onNext(true)
+        }
+        MyAdUnit.TestMode = true
+
         return true
     }
 

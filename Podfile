@@ -5,6 +5,10 @@ target 'SimplyTallyCounter' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for SimplyScanner
+   pod 'Google-Mobile-Ads-SDK'
+  # pod 'SwiftyAds'
+
   # Pods for SimplyTallyCounter
   pod 'JPSVolumeButtonHandler'
   pod 'RxSwift'
@@ -12,4 +16,5 @@ target 'SimplyTallyCounter' do
     pod 'Action'
     pod 'RxGesture'
     pod 'NSObject+Rx'
+    pod 'DeviceKit'
 end

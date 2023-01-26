@@ -60,6 +60,8 @@ class ViewController: UIViewController {
     var volumeHandler: JPSVolumeButtonHandler? = nil
     @IBOutlet var txtCounter: UILabel!
     @IBOutlet var tapView: UIView!
+    @IBOutlet var adView: UIView!
+    var adBanner: MyAdUnit?
     var counter: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +81,12 @@ class ViewController: UIViewController {
             }
         }.disposed(by: rx.disposeBag)
         
+        AppDelegate.bLoadedGADMobileAds.filter{ $0 }
+            .subscribe { _ in
+                self.adBanner = BannerAd(rootViewController: self, adType: .banner, forKey: "Banner", width: 320, adViewContainer: self.adView)
+            }
+            .disposed(by: rx.disposeBag)
+
     }
     override func viewDidDisappear(_ animated: Bool) {
         volumeHandler?.start(false)
@@ -101,6 +109,11 @@ class ViewController: UIViewController {
                       duration: 0.25,
                        options: .transitionCurlUp,
                     animations: { self.txtCounter.text = "\(self.counter)" }, completion: nil)
+    }
+    
+    @IBAction func openSetting(_ sender: Any) {
+        let vc = SettingViewController()
+        self.present(vc, animated: true)
     }
 }
 

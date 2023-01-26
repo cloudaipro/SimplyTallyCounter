@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7M-tD-f5m">
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F85-lN-at0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="2OT-Cw-V1B"/>
+                                            <constraint firstAttribute="width" secondItem="F85-lN-at0" secondAttribute="height" multiplier="1:1" id="srk-Z2-bsy"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMK-GG-Nh2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="F85-lN-at0" secondAttribute="bottom" id="R5M-D0-2N6"/>
+                                    <constraint firstItem="F85-lN-at0" firstAttribute="top" secondItem="m7M-tD-f5m" secondAttribute="top" id="b6l-Gn-2tI"/>
+                                    <constraint firstAttribute="height" constant="60" id="hNw-xC-S0L"/>
+                                    <constraint firstItem="F85-lN-at0" firstAttribute="leading" secondItem="m7M-tD-f5m" secondAttribute="leading" id="iDK-ay-R4d"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-zl-p7T">
                                 <rect key="frame" x="61.666666666666657" y="354.66666666666669" width="270" height="168.00000000000006"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -26,15 +54,29 @@
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv7-kd-26h">
+                                <rect key="frame" x="0.0" y="792" width="393" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Mi-cq-RYp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sv7-kd-26h" secondAttribute="trailing" id="1V0-PC-cKp"/>
+                            <constraint firstAttribute="bottom" secondItem="sv7-kd-26h" secondAttribute="bottom" id="4dZ-WR-7sa"/>
                             <constraint firstItem="Obl-zl-p7T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9pU-6w-4fK"/>
+                            <constraint firstItem="sv7-kd-26h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CHV-Sd-xWA"/>
+                            <constraint firstItem="m7M-tD-f5m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bl6-RI-dxy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m7M-tD-f5m" secondAttribute="trailing" id="iVI-i6-uj3"/>
                             <constraint firstItem="Obl-zl-p7T" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ld0-0x-4xO"/>
+                            <constraint firstItem="m7M-tD-f5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qC7-ZV-LbA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adView" destination="sv7-kd-26h" id="L3r-5J-qEV"/>
                         <outlet property="tapView" destination="8bC-Xf-vdC" id="Nz3-AE-yBM"/>
                         <outlet property="txtCounter" destination="Obl-zl-p7T" id="eCh-Nn-Kvg"/>
                     </connections>
@@ -45,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

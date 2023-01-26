@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		83E8EA3F721AC18D9967BC56 /* Pods_SimplyTallyCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C05DB358360D6F959F70 /* Pods_SimplyTallyCounter.framework */; };
+		FA2771252982052F0051A0B3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2771232982052F0051A0B3 /* SettingViewController.swift */; };
+		FA2771262982052F0051A0B3 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2771242982052F0051A0B3 /* SettingViewController.xib */; };
+		FA27712B29820B760051A0B3 /* MyAdUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27712829820B760051A0B3 /* MyAdUnit.swift */; };
+		FA27712C29820B760051A0B3 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27712929820B760051A0B3 /* BannerAd.swift */; };
+		FA27712D29820B760051A0B3 /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27712A29820B760051A0B3 /* InterstitialAd.swift */; };
+		FA27712F29820B9E0051A0B3 /* RatingAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27712E29820B9E0051A0B3 /* RatingAppManager.swift */; };
+		FA27713229820E2A0051A0B3 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = FA27713129820E2A0051A0B3 /* Defaults */; };
+		FA27713429820EE20051A0B3 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713329820EE20051A0B3 /* Bundle.swift */; };
+		FA27713629820F210051A0B3 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713529820F210051A0B3 /* UIApplicationExtension.swift */; };
+		FA27713829820F680051A0B3 /* MyAdUnitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713729820F680051A0B3 /* MyAdUnitExtension.swift */; };
+		FA27713A29820FAF0051A0B3 /* SpeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713929820FAF0051A0B3 /* SpeedLog.swift */; };
+		FA27713C29820FC00051A0B3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713B29820FC00051A0B3 /* UIViewExtension.swift */; };
+		FA27713E29820FF90051A0B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713D29820FF90051A0B3 /* StringExtension.swift */; };
+		FA2771432982190E0051A0B3 /* IOSVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2771422982190E0051A0B3 /* IOSVersion.swift */; };
 		FA62F11F2966963500D84B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F11E2966963500D84B0D /* AppDelegate.swift */; };
 		FA62F1212966963500D84B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F1202966963500D84B0D /* SceneDelegate.swift */; };
 		FA62F1232966963500D84B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F1222966963500D84B0D /* ViewController.swift */; };
@@ -20,6 +34,19 @@
 		8E1845608E5E8EFA7FAFF0C0 /* Pods-SimplyTallyCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplyTallyCounter.release.xcconfig"; path = "Target Support Files/Pods-SimplyTallyCounter/Pods-SimplyTallyCounter.release.xcconfig"; sourceTree = "<group>"; };
 		BFB1C05DB358360D6F959F70 /* Pods_SimplyTallyCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplyTallyCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5781EB08F487BEDB1E50C3E /* Pods-SimplyTallyCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplyTallyCounter.debug.xcconfig"; path = "Target Support Files/Pods-SimplyTallyCounter/Pods-SimplyTallyCounter.debug.xcconfig"; sourceTree = "<group>"; };
+		FA2771232982052F0051A0B3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FA2771242982052F0051A0B3 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		FA27712829820B760051A0B3 /* MyAdUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdUnit.swift; sourceTree = "<group>"; };
+		FA27712929820B760051A0B3 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		FA27712A29820B760051A0B3 /* InterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
+		FA27712E29820B9E0051A0B3 /* RatingAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingAppManager.swift; sourceTree = "<group>"; };
+		FA27713329820EE20051A0B3 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		FA27713529820F210051A0B3 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		FA27713729820F680051A0B3 /* MyAdUnitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdUnitExtension.swift; sourceTree = "<group>"; };
+		FA27713929820FAF0051A0B3 /* SpeedLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLog.swift; sourceTree = "<group>"; };
+		FA27713B29820FC00051A0B3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FA27713D29820FF90051A0B3 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FA2771422982190E0051A0B3 /* IOSVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSVersion.swift; sourceTree = "<group>"; };
 		FA62F11B2966963500D84B0D /* SimplyTallyCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyTallyCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62F11E2966963500D84B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA62F1202966963500D84B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA27713229820E2A0051A0B3 /* Defaults in Frameworks */,
 				83E8EA3F721AC18D9967BC56 /* Pods_SimplyTallyCounter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +87,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA27712729820B760051A0B3 /* GoogleAD */ = {
+			isa = PBXGroup;
+			children = (
+				FA27712829820B760051A0B3 /* MyAdUnit.swift */,
+				FA27712929820B760051A0B3 /* BannerAd.swift */,
+				FA27712A29820B760051A0B3 /* InterstitialAd.swift */,
+			);
+			path = GoogleAD;
+			sourceTree = "<group>";
+		};
+		FA27713F298210230051A0B3 /* CommFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA2771422982190E0051A0B3 /* IOSVersion.swift */,
+				FA27713D29820FF90051A0B3 /* StringExtension.swift */,
+				FA27713B29820FC00051A0B3 /* UIViewExtension.swift */,
+				FA27713929820FAF0051A0B3 /* SpeedLog.swift */,
+				FA27713529820F210051A0B3 /* UIApplicationExtension.swift */,
+				FA27713329820EE20051A0B3 /* Bundle.swift */,
+				FA27712E29820B9E0051A0B3 /* RatingAppManager.swift */,
+				FA27712729820B760051A0B3 /* GoogleAD */,
+			);
+			path = CommFiles;
+			sourceTree = "<group>";
+		};
 		FA62F1122966963500D84B0D = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +133,17 @@
 		FA62F11D2966963500D84B0D /* SimplyTallyCounter */ = {
 			isa = PBXGroup;
 			children = (
+				FA27713F298210230051A0B3 /* CommFiles */,
 				FA62F11E2966963500D84B0D /* AppDelegate.swift */,
 				FA62F1202966963500D84B0D /* SceneDelegate.swift */,
 				FA62F1222966963500D84B0D /* ViewController.swift */,
+				FA27713729820F680051A0B3 /* MyAdUnitExtension.swift */,
 				FA62F1242966963500D84B0D /* Main.storyboard */,
 				FA62F1272966963700D84B0D /* Assets.xcassets */,
 				FA62F1292966963700D84B0D /* LaunchScreen.storyboard */,
 				FA62F12C2966963700D84B0D /* Info.plist */,
+				FA2771232982052F0051A0B3 /* SettingViewController.swift */,
+				FA2771242982052F0051A0B3 /* SettingViewController.xib */,
 			);
 			path = SimplyTallyCounter;
 			sourceTree = "<group>";
@@ -109,6 +166,9 @@
 			dependencies = (
 			);
 			name = SimplyTallyCounter;
+			packageProductDependencies = (
+				FA27713129820E2A0051A0B3 /* Defaults */,
+			);
 			productName = SimplyTallyCounter;
 			productReference = FA62F11B2966963500D84B0D /* SimplyTallyCounter.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +197,9 @@
 				Base,
 			);
 			mainGroup = FA62F1122966963500D84B0D;
+			packageReferences = (
+				FA27713029820E2A0051A0B3 /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = FA62F11C2966963500D84B0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +217,7 @@
 				FA62F12B2966963700D84B0D /* LaunchScreen.storyboard in Resources */,
 				FA62F1282966963700D84B0D /* Assets.xcassets in Resources */,
 				FA62F1262966963500D84B0D /* Main.storyboard in Resources */,
+				FA2771262982052F0051A0B3 /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,9 +270,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2771432982190E0051A0B3 /* IOSVersion.swift in Sources */,
+				FA27712D29820B760051A0B3 /* InterstitialAd.swift in Sources */,
+				FA27713429820EE20051A0B3 /* Bundle.swift in Sources */,
+				FA27713629820F210051A0B3 /* UIApplicationExtension.swift in Sources */,
 				FA62F1232966963500D84B0D /* ViewController.swift in Sources */,
+				FA27712F29820B9E0051A0B3 /* RatingAppManager.swift in Sources */,
 				FA62F11F2966963500D84B0D /* AppDelegate.swift in Sources */,
+				FA27713829820F680051A0B3 /* MyAdUnitExtension.swift in Sources */,
 				FA62F1212966963500D84B0D /* SceneDelegate.swift in Sources */,
+				FA27713E29820FF90051A0B3 /* StringExtension.swift in Sources */,
+				FA27713A29820FAF0051A0B3 /* SpeedLog.swift in Sources */,
+				FA27713C29820FC00051A0B3 /* UIViewExtension.swift in Sources */,
+				FA27712B29820B760051A0B3 /* MyAdUnit.swift in Sources */,
+				FA27712C29820B760051A0B3 /* BannerAd.swift in Sources */,
+				FA2771252982052F0051A0B3 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,12 +440,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = admin.SimplyTallyCounter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.SimplyTallyCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -396,12 +473,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = admin.SimplyTallyCounter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.SimplyTallyCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -434,6 +512,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA27713029820E2A0051A0B3 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA27713129820E2A0051A0B3 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA27713029820E2A0051A0B3 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA62F1132966963500D84B0D /* Project object */;
 }
