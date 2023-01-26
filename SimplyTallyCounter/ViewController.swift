@@ -66,9 +66,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         volumeHandler = JPSVolumeButtonHandler(up: {
-            self.doDown()
+            self.doUP()
         }, downBlock: {
             self.doDown()
             
@@ -87,7 +86,7 @@ class ViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
 
-    }
+    }   
     override func viewDidDisappear(_ animated: Bool) {
         volumeHandler?.start(false)
         super.viewDidDisappear(animated)
@@ -95,25 +94,29 @@ class ViewController: UIViewController {
     private func doUP() {
         Vibration.light.vibrate()
         self.counter += 1
-        self.updateLabel()
+        self.updateLabel(bUp: true)
     }
     private func doDown() {
         if self.counter > 0 {
             Vibration.error.vibrate()
             self.counter -= 1
-            self.updateLabel()
+            self.updateLabel(bUp: false)
         }
     }
-    private func updateLabel() {
+    func updateLabel(bUp: Bool, animated: Bool = true) {
+        //self.txtCounter.text = "\(self.counter)"
+
         UIView.transition(with: txtCounter,
-                      duration: 0.25,
-                       options: .transitionCurlUp,
+                          duration: animated ? 0.25 : 0,
+                          options: bUp ? .transitionCurlUp : .transitionCurlDown,
                     animations: { self.txtCounter.text = "\(self.counter)" }, completion: nil)
     }
     
+    @IBAction func doMinmus(_ sender: Any) {
+        doDown()
+    }
     @IBAction func openSetting(_ sender: Any) {
         let vc = SettingViewController()
         self.present(vc, animated: true)
     }
 }
-

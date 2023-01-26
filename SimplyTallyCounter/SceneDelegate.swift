@@ -21,11 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         /* alex disable dark mode */
-        if #available(iOS 13.0, *) {
-            if IOSVersion.SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: "13.0") {
-                window.overrideUserInterfaceStyle = .light
-            }
-        }
+//        if #available(iOS 13.0, *) {
+//            if IOSVersion.SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: "13.0") {
+//                window.overrideUserInterfaceStyle = .light
+//            }
+//        }
         /* alex disable dark mode -- END */
         window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window.makeKeyAndVisible()

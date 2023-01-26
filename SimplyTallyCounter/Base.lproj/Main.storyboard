@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,23 +36,55 @@
                                             <action selector="openSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMK-GG-Nh2"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simply Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-4t-14K">
+                                        <rect key="frame" x="105.33333333333333" y="18.333333333333329" width="182.66666666666669" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-ZN-pab" userLabel="minus" customClass="RoundButton" customModule="SimplyTallyCounter" customModuleProvider="target">
+                                        <rect key="frame" x="309" y="14" width="64" height="32"/>
+                                        <color key="backgroundColor" name="apple"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="KDh-A2-95f"/>
+                                            <constraint firstAttribute="width" constant="64" id="KZs-iD-r8v"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="-1">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="doMinmus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICU-bX-7eI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="myback"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aTR-ZN-pab" secondAttribute="trailing" constant="20" id="BcZ-K3-B4p"/>
+                                    <constraint firstItem="aC1-4t-14K" firstAttribute="centerX" secondItem="m7M-tD-f5m" secondAttribute="centerX" id="Fji-xD-aRC"/>
                                     <constraint firstAttribute="bottom" secondItem="F85-lN-at0" secondAttribute="bottom" id="R5M-D0-2N6"/>
                                     <constraint firstItem="F85-lN-at0" firstAttribute="top" secondItem="m7M-tD-f5m" secondAttribute="top" id="b6l-Gn-2tI"/>
+                                    <constraint firstItem="aTR-ZN-pab" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="dG9-IX-qcQ"/>
                                     <constraint firstAttribute="height" constant="60" id="hNw-xC-S0L"/>
                                     <constraint firstItem="F85-lN-at0" firstAttribute="leading" secondItem="m7M-tD-f5m" secondAttribute="leading" id="iDK-ay-R4d"/>
+                                    <constraint firstItem="aC1-4t-14K" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="nX2-ZQ-LBC"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-zl-p7T">
                                 <rect key="frame" x="61.666666666666657" y="354.66666666666669" width="270" height="168.00000000000006"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" name="myback"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="YFR-VC-dyT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="144"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <color key="textColor" name="brick"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv7-kd-26h">
@@ -63,7 +96,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="myback"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sv7-kd-26h" secondAttribute="trailing" id="1V0-PC-cKp"/>
                             <constraint firstAttribute="bottom" secondItem="sv7-kd-26h" secondAttribute="bottom" id="4dZ-WR-7sa"/>
@@ -86,16 +119,24 @@
             <point key="canvasLocation" x="-190" y="-27"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="aTR-ZN-pab">
+            <size key="intrinsicContentSize" width="30" height="40"/>
+        </designable>
+    </designables>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <namedColor name="apple">
+            <color red="0.32549019607843138" green="0.76470588235294112" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="brick">
+            <color red="0.89803921568627454" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="myback">
+            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

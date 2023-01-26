@@ -120,7 +120,7 @@ class RatingAppManager: NSObject {
             let body: String = NSLocale.current.languageCode == "zh" ? """
             
             
-            Simple Scanner 版本:\(Bundle.main.releaseVersionNumber)(\(Bundle.main.buildVersionNumber))
+            Simply Tally Counter 版本:\(Bundle.main.releaseVersionNumber)(\(Bundle.main.buildVersionNumber))
             iPhone 型號:\(Device.current), \(UIDevice.current.systemVersion)
             區域: \(NSLocale.current.regionCode ?? ""), 語言:\(NSLocale.current.languageCode ?? "")
             為了更好的協助，我們會將以上信息提供給我們的開發者，請勿刪除。
@@ -128,14 +128,14 @@ class RatingAppManager: NSObject {
             : """
             
             
-            Simple Scanner version:\(Bundle.main.releaseVersionNumber)(\(Bundle.main.buildVersionNumber))
+            Simply Tally Counter version:\(Bundle.main.releaseVersionNumber)(\(Bundle.main.buildVersionNumber))
             iPhone info:\(Device.current), \(UIDevice.current.systemVersion)
             region: \(NSLocale.current.regionCode ?? ""), language:\(NSLocale.current.languageCode ?? "")
             For better assistance, we will provide the above information to our developers, please do not delete.
             """
             
             mail.mailComposeDelegate = self
-            mail.setSubject("Simply Scanner Feedback")
+            mail.setSubject("Simply Tally Counter Feedback")
             mail.setToRecipients(["imskchen@gmail.com"])
             mail.setMessageBody(body, isHTML: false)
             

@@ -28,6 +28,7 @@
 		FA62F1262966963500D84B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62F1242966963500D84B0D /* Main.storyboard */; };
 		FA62F1282966963700D84B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA62F1272966963700D84B0D /* Assets.xcassets */; };
 		FA62F12B2966963700D84B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62F1292966963700D84B0D /* LaunchScreen.storyboard */; };
+		FA950DA9298242C700EDBD8F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA950DA8298242C700EDBD8F /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		FA62F1272966963700D84B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA62F12A2966963700D84B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA62F12C2966963700D84B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA950DA8298242C700EDBD8F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		FA27713F298210230051A0B3 /* CommFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FA950DA8298242C700EDBD8F /* RoundButton.swift */,
 				FA2771422982190E0051A0B3 /* IOSVersion.swift */,
 				FA27713D29820FF90051A0B3 /* StringExtension.swift */,
 				FA27713B29820FC00051A0B3 /* UIViewExtension.swift */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA950DA9298242C700EDBD8F /* RoundButton.swift in Sources */,
 				FA2771432982190E0051A0B3 /* IOSVersion.swift in Sources */,
 				FA27712D29820B760051A0B3 /* InterstitialAd.swift in Sources */,
 				FA27713429820EE20051A0B3 /* Bundle.swift in Sources */,
