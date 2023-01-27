@@ -10,7 +10,8 @@ import Foundation
 extension MyAdUnit {
     static let AppID = "ca-app-pub-4989249935109457~2602632513"
     static let AdUnitID = [
-        "Banner" : "ca-app-pub-4989249935109457/1061200579",
+        "App Open" : "ca-app-pub-4989249935109457/3571851836",
+        "Banner" : "ca-app-pub-4989249935109457/1061200579"
     ]
     static let AdTestUnitID = [
         "App Open" : "ca-app-pub-3940256099942544/5662855259",
