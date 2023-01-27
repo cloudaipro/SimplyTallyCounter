@@ -22,6 +22,8 @@
 		FA27713C29820FC00051A0B3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713B29820FC00051A0B3 /* UIViewExtension.swift */; };
 		FA27713E29820FF90051A0B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27713D29820FF90051A0B3 /* StringExtension.swift */; };
 		FA2771432982190E0051A0B3 /* IOSVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2771422982190E0051A0B3 /* IOSVersion.swift */; };
+		FA3BD14E29831648004AFE93 /* IntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3BD14D29831648004AFE93 /* IntroView.xib */; };
+		FA3BD1502983166E004AFE93 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BD14F2983166E004AFE93 /* IntroView.swift */; };
 		FA62F11F2966963500D84B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F11E2966963500D84B0D /* AppDelegate.swift */; };
 		FA62F1212966963500D84B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F1202966963500D84B0D /* SceneDelegate.swift */; };
 		FA62F1232966963500D84B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62F1222966963500D84B0D /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		FA27713B29820FC00051A0B3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA27713D29820FF90051A0B3 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FA2771422982190E0051A0B3 /* IOSVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSVersion.swift; sourceTree = "<group>"; };
+		FA3BD14D29831648004AFE93 /* IntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroView.xib; sourceTree = "<group>"; };
+		FA3BD14F2983166E004AFE93 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		FA62F11B2966963500D84B0D /* SimplyTallyCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyTallyCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62F11E2966963500D84B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA62F1202966963500D84B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				FA62F12C2966963700D84B0D /* Info.plist */,
 				FA2771232982052F0051A0B3 /* SettingViewController.swift */,
 				FA2771242982052F0051A0B3 /* SettingViewController.xib */,
+				FA3BD14D29831648004AFE93 /* IntroView.xib */,
+				FA3BD14F2983166E004AFE93 /* IntroView.swift */,
 			);
 			path = SimplyTallyCounter;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				FA62F1282966963700D84B0D /* Assets.xcassets in Resources */,
 				FA62F1262966963500D84B0D /* Main.storyboard in Resources */,
 				FA2771262982052F0051A0B3 /* SettingViewController.xib in Resources */,
+				FA3BD14E29831648004AFE93 /* IntroView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +293,7 @@
 				FA27713E29820FF90051A0B3 /* StringExtension.swift in Sources */,
 				FA27713A29820FAF0051A0B3 /* SpeedLog.swift in Sources */,
 				FA27713C29820FC00051A0B3 /* UIViewExtension.swift in Sources */,
+				FA3BD1502983166E004AFE93 /* IntroView.swift in Sources */,
 				FA27712B29820B760051A0B3 /* MyAdUnit.swift in Sources */,
 				FA27712C29820B760051A0B3 /* BannerAd.swift in Sources */,
 				FA2771252982052F0051A0B3 /* SettingViewController.swift in Sources */,

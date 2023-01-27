@@ -86,6 +86,8 @@ class ViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
 
+        let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
+        self.view.addSubviewEqualSize(introView)
     }   
     override func viewDidDisappear(_ animated: Bool) {
         volumeHandler?.start(false)

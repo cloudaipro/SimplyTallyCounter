@@ -27,6 +27,8 @@ class SettingViewController: UIViewController {
                         vc.counter = 0
                         vc.updateLabel(bUp: false, animated: false)
                     }
+                    let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
+                    vc.view.addSubviewEqualSize(introView)
                 }
             }
         }.disposed(by: rx.disposeBag)
