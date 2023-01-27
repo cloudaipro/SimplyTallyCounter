@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import JPSVolumeButtonHandler
+//import JPSVolumeButtonHandler
 //import RxSwift
 import RxGesture
 import NSObject_Rx
@@ -57,7 +57,7 @@ enum Vibration {
     }
 
 class ViewController: UIViewController {
-    var volumeHandler: JPSVolumeButtonHandler? = nil
+//    var volumeHandler: JPSVolumeButtonHandler? = nil
     @IBOutlet var txtCounter: UILabel!
     @IBOutlet var tapView: UIView!
     @IBOutlet var adView: UIView!
@@ -66,13 +66,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        volumeHandler = JPSVolumeButtonHandler(up: {
-            self.doUP()
-        }, downBlock: {
-            self.doDown()
-            
-        })
-        volumeHandler?.start(true)
+//        volumeHandler = JPSVolumeButtonHandler(up: {
+//            self.doUP()
+//        }, downBlock: {
+//            self.doDown()
+//
+//        })
+//        volumeHandler?.start(true)
         
         tapView.rx.tapGesture().asDriver().drive { tap in
             if tap.state == .ended {
@@ -90,11 +90,11 @@ class ViewController: UIViewController {
         self.view.addSubviewEqualSize(introView)
     }   
     override func viewDidDisappear(_ animated: Bool) {
-        volumeHandler?.start(false)
+//        volumeHandler?.start(false)
         super.viewDidDisappear(animated)
     }
     private func doUP() {
-        Vibration.light.vibrate()
+        Vibration.medium.vibrate()
         self.counter += 1
         self.updateLabel(bUp: true)
     }

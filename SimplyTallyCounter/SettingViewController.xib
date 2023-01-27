@@ -16,6 +16,7 @@
                 <outlet property="rateView" destination="mk9-WN-a8p" id="0qa-T7-H15"/>
                 <outlet property="resetView" destination="dps-0j-8u0" id="41J-6w-hIt"/>
                 <outlet property="shareView" destination="bhC-BO-n07" id="YiM-wh-9iH"/>
+                <outlet property="verLabel" destination="Ff5-Mi-tLW" id="Zlq-8L-CYX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -131,6 +132,12 @@
                         <constraint firstAttribute="height" constant="60" id="xEb-U7-lAb"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff5-Mi-tLW">
+                    <rect key="frame" x="20" y="781" width="353" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,16 +147,19 @@
                 <constraint firstItem="vLY-jo-KFD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9qf-dM-KCa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dps-0j-8u0" secondAttribute="trailing" constant="20" id="BsB-GK-zPe"/>
                 <constraint firstAttribute="trailing" secondItem="mk9-WN-a8p" secondAttribute="trailing" constant="20" id="RKV-6m-F5e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ff5-Mi-tLW" secondAttribute="bottom" constant="20" id="RX3-fW-LSY"/>
                 <constraint firstItem="bhC-BO-n07" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="S19-9f-2fG"/>
                 <constraint firstItem="svz-Di-Goy" firstAttribute="top" secondItem="bhC-BO-n07" secondAttribute="bottom" id="VX4-os-ogz"/>
                 <constraint firstItem="bhC-BO-n07" firstAttribute="top" secondItem="mk9-WN-a8p" secondAttribute="bottom" id="ZfF-4b-a5I"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vLY-jo-KFD" secondAttribute="trailing" constant="20" id="cAs-vF-Kle"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bhC-BO-n07" secondAttribute="trailing" constant="20" id="cZQ-sN-0eS"/>
+                <constraint firstItem="Ff5-Mi-tLW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fp3-UB-h9g"/>
                 <constraint firstItem="mk9-WN-a8p" firstAttribute="top" secondItem="dps-0j-8u0" secondAttribute="bottom" id="mng-UP-gFv"/>
                 <constraint firstItem="mk9-WN-a8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="n3p-9l-6U1"/>
                 <constraint firstItem="svz-Di-Goy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nhk-Wp-lNf"/>
                 <constraint firstItem="dps-0j-8u0" firstAttribute="top" secondItem="vLY-jo-KFD" secondAttribute="bottom" id="rvj-Lc-mGi"/>
                 <constraint firstItem="dps-0j-8u0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xTm-Ok-X8I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ff5-Mi-tLW" secondAttribute="trailing" constant="20" id="yML-EX-qPk"/>
             </constraints>
             <point key="canvasLocation" x="-13" y="-11"/>
         </view>

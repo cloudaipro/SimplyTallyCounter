@@ -20,13 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        /* alex disable dark mode */
-//        if #available(iOS 13.0, *) {
-//            if IOSVersion.SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: "13.0") {
-//                window.overrideUserInterfaceStyle = .light
-//            }
-//        }
-        /* alex disable dark mode -- END */
         window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window.makeKeyAndVisible()
     }
@@ -41,6 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        RatingAppManager.applicationDidBecomeActive()
         AppDelegate.appOpenAd?.tryToPresentAd()
     }
 

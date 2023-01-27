@@ -15,21 +15,27 @@ class SettingViewController: UIViewController {
     @IBOutlet var rateView: UIView!
     @IBOutlet var shareView: UIView!
     @IBOutlet var feedbackView: UIView!
-    
+    @IBOutlet var verLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        verLabel.text = "v\(Bundle.main.releaseVersionNumber) build \(Bundle.main.buildVersionNumber)"
+
         // Do any additional setup after loading the view.
         resetView.rx.tapGesture().asDriver().drive() { tap in
             if tap.state == .ended, let vc = (self.presentingViewController as? ViewController) {
-                self.dismiss(animated: true) {
-                    if vc.counter > 0 {
-                        vc.counter = 0
-                        vc.updateLabel(bUp: false, animated: false)
-                    }
-                    let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
-                    vc.view.addSubviewEqualSize(introView)
-                }
+                let alert = UIAlertController(title: "Reset counter", message: "Are you sure to reset the counter?", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                    self.dismiss(animated: true) {
+                        if vc.counter > 0 {
+                            vc.counter = 0
+                            vc.updateLabel(bUp: false, animated: false)
+                        }
+                        let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
+                        vc.view.addSubviewEqualSize(introView)
+                    }}))
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
             }
         }.disposed(by: rx.disposeBag)
         rateView.rx.tapGesture().asDriver().drive() { tap in
