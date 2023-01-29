@@ -49,7 +49,7 @@ class SettingViewController: UIViewController {
             if tap.state == .ended, let vc = (self.presentingViewController as? ViewController) {
                 self.dismiss(animated: true) {
                     guard let appID = Bundle.main.object(forInfoDictionaryKey: "APP_ID") as? String else { return } // 1619943223
-                    let items = ["One of the most powerful and easy-to-use apps I've been used! Here is the link to get the app from App Store.", URL(string: "https://apps.apple.com/app/simply-scanner/id\(appID)")!] as [Any]
+                    let items = ["One of the most powerful and easy-to-use apps I've been used! Here is the link to get the app from App Store.", URL(string: "https://apps.apple.com/app/simply-tally-counter/id\(appID)")!] as [Any]
                     let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
                     avc.setValue("I warmly recommend an excellent app to you", forKey: "subject")
                     avc.completionWithItemsHandler =  { type, ok, items, err in
