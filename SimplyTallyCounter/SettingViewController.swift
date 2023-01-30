@@ -32,7 +32,7 @@ class SettingViewController: UIViewController {
                             vc.updateLabel(bUp: false, animated: false)
                         }
                         let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
-                        vc.view.addSubviewEqualSize(introView)
+                        vc.tapView.addSubviewEqualSize(introView)
                     }}))
                 alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
                 self.present(alert, animated: true)

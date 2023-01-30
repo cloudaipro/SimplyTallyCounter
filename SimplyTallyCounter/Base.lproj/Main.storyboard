@@ -77,40 +77,52 @@
                                     <constraint firstItem="aC1-4t-14K" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="nX2-ZQ-LBC"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-zl-p7T">
-                                <rect key="frame" x="61.666666666666657" y="342" width="270" height="168"/>
-                                <color key="backgroundColor" name="myback"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tK6-ak-msF">
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-zl-p7T">
+                                        <rect key="frame" x="61.666666666666657" y="230.66666666666669" width="270" height="168"/>
+                                        <color key="backgroundColor" name="myback"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="YFR-VC-dyT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="144"/>
+                                        <color key="textColor" name="brick"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv7-kd-26h">
+                                        <rect key="frame" x="0.0" y="673" width="393" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8Mi-cq-RYp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="YFR-VC-dyT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="144"/>
-                                <color key="textColor" name="brick"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv7-kd-26h">
-                                <rect key="frame" x="0.0" y="792" width="393" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8Mi-cq-RYp"/>
+                                    <constraint firstAttribute="bottom" secondItem="sv7-kd-26h" secondAttribute="bottom" id="FaH-vG-l6G"/>
+                                    <constraint firstAttribute="trailing" secondItem="sv7-kd-26h" secondAttribute="trailing" id="RW0-Zi-V7m"/>
+                                    <constraint firstItem="Obl-zl-p7T" firstAttribute="centerX" secondItem="tK6-ak-msF" secondAttribute="centerX" id="TBl-1F-ipo"/>
+                                    <constraint firstItem="Obl-zl-p7T" firstAttribute="centerY" secondItem="tK6-ak-msF" secondAttribute="centerY" constant="-52" id="ZTl-Qy-BoV"/>
+                                    <constraint firstItem="sv7-kd-26h" firstAttribute="leading" secondItem="tK6-ak-msF" secondAttribute="leading" id="gN3-LL-lwB"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="myback"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sv7-kd-26h" secondAttribute="trailing" id="1V0-PC-cKp"/>
-                            <constraint firstAttribute="bottom" secondItem="sv7-kd-26h" secondAttribute="bottom" id="4dZ-WR-7sa"/>
-                            <constraint firstItem="Obl-zl-p7T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9pU-6w-4fK"/>
-                            <constraint firstItem="sv7-kd-26h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CHV-Sd-xWA"/>
+                            <constraint firstAttribute="bottom" secondItem="tK6-ak-msF" secondAttribute="bottom" id="7qe-dZ-tNb"/>
+                            <constraint firstItem="tK6-ak-msF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IkQ-gZ-X6N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tK6-ak-msF" secondAttribute="trailing" id="TyV-rZ-zfr"/>
                             <constraint firstItem="m7M-tD-f5m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bl6-RI-dxy"/>
+                            <constraint firstItem="tK6-ak-msF" firstAttribute="top" secondItem="m7M-tD-f5m" secondAttribute="bottom" id="cR5-o9-oXq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m7M-tD-f5m" secondAttribute="trailing" id="iVI-i6-uj3"/>
-                            <constraint firstItem="Obl-zl-p7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ld0-0x-4xO"/>
                             <constraint firstItem="m7M-tD-f5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qC7-ZV-LbA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="adView" destination="sv7-kd-26h" id="L3r-5J-qEV"/>
-                        <outlet property="tapView" destination="8bC-Xf-vdC" id="Nz3-AE-yBM"/>
+                        <outlet property="tapView" destination="tK6-ak-msF" id="Pje-tU-Skk"/>
                         <outlet property="txtCounter" destination="Obl-zl-p7T" id="eCh-Nn-Kvg"/>
                     </connections>
                 </viewController>

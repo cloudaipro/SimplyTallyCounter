@@ -66,14 +66,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        volumeHandler = JPSVolumeButtonHandler(up: {
-//            self.doUP()
-//        }, downBlock: {
-//            self.doDown()
-//
-//        })
-//        volumeHandler?.start(true)
-        
+
         tapView.rx.tapGesture().asDriver().drive { tap in
             if tap.state == .ended {
                 self.doUP()
@@ -87,7 +80,7 @@ class ViewController: UIViewController {
             .disposed(by: rx.disposeBag)
 
         let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
-        self.view.addSubviewEqualSize(introView)
+        tapView.addSubviewEqualSize(introView)
     }   
     override func viewDidDisappear(_ animated: Bool) {
 //        volumeHandler?.start(false)
