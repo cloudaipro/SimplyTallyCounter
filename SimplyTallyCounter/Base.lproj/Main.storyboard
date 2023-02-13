@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7M-tD-f5m">
-                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F85-lN-at0">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="15" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="2OT-Cw-V1B"/>
                                             <constraint firstAttribute="width" secondItem="F85-lN-at0" secondAttribute="height" multiplier="1:1" id="srk-Z2-bsy"/>
@@ -37,51 +37,62 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simply Tally Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-4t-14K">
-                                        <rect key="frame" x="105.33333333333333" y="18.333333333333329" width="182.66666666666669" height="23.333333333333329"/>
+                                        <rect key="frame" x="105.33333333333333" y="33.333333333333329" width="182.66666666666669" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-ZN-pab" userLabel="minus" customClass="RoundButton" customModule="SimplyTallyCounter" customModuleProvider="target">
-                                        <rect key="frame" x="309" y="14" width="64" height="32"/>
-                                        <color key="backgroundColor" name="apple"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zyl-ZO-r2L" userLabel="minusView">
+                                        <rect key="frame" x="303" y="0.0" width="90" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-ZN-pab" userLabel="minus" customClass="RoundButton" customModule="SimplyTallyCounter" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="29" width="64" height="32"/>
+                                                <color key="backgroundColor" name="apple"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="KDh-A2-95f"/>
+                                                    <constraint firstAttribute="width" constant="64" id="KZs-iD-r8v"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-1">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doMinmus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICU-bX-7eI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="KDh-A2-95f"/>
-                                            <constraint firstAttribute="width" constant="64" id="KZs-iD-r8v"/>
+                                            <constraint firstItem="aTR-ZN-pab" firstAttribute="centerY" secondItem="Zyl-ZO-r2L" secondAttribute="centerY" id="8Ny-Ze-s9X"/>
+                                            <constraint firstAttribute="width" constant="90" id="de2-OF-Xmg"/>
+                                            <constraint firstItem="aTR-ZN-pab" firstAttribute="centerX" secondItem="Zyl-ZO-r2L" secondAttribute="centerX" id="pOz-uX-Q16"/>
                                         </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="-1">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="doMinmus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICU-bX-7eI"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="myback"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aTR-ZN-pab" secondAttribute="trailing" constant="20" id="BcZ-K3-B4p"/>
                                     <constraint firstItem="aC1-4t-14K" firstAttribute="centerX" secondItem="m7M-tD-f5m" secondAttribute="centerX" id="Fji-xD-aRC"/>
-                                    <constraint firstAttribute="bottom" secondItem="F85-lN-at0" secondAttribute="bottom" id="R5M-D0-2N6"/>
-                                    <constraint firstItem="F85-lN-at0" firstAttribute="top" secondItem="m7M-tD-f5m" secondAttribute="top" id="b6l-Gn-2tI"/>
-                                    <constraint firstItem="aTR-ZN-pab" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="dG9-IX-qcQ"/>
-                                    <constraint firstAttribute="height" constant="60" id="hNw-xC-S0L"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zyl-ZO-r2L" secondAttribute="trailing" id="LbY-fO-cex"/>
+                                    <constraint firstItem="F85-lN-at0" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="Q01-RM-Exk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zyl-ZO-r2L" secondAttribute="bottom" id="gKi-8g-6mC"/>
+                                    <constraint firstAttribute="height" constant="90" id="hNw-xC-S0L"/>
                                     <constraint firstItem="F85-lN-at0" firstAttribute="leading" secondItem="m7M-tD-f5m" secondAttribute="leading" id="iDK-ay-R4d"/>
+                                    <constraint firstItem="Zyl-ZO-r2L" firstAttribute="top" secondItem="m7M-tD-f5m" secondAttribute="top" id="iq6-qx-7ny"/>
                                     <constraint firstItem="aC1-4t-14K" firstAttribute="centerY" secondItem="m7M-tD-f5m" secondAttribute="centerY" id="nX2-ZQ-LBC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tK6-ak-msF">
-                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <rect key="frame" x="0.0" y="149" width="393" height="703"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-zl-p7T">
-                                        <rect key="frame" x="61.666666666666657" y="230.66666666666669" width="270" height="168"/>
+                                        <rect key="frame" x="61.666666666666657" y="215.66666666666669" width="270" height="168"/>
                                         <color key="backgroundColor" name="myback"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="YFR-VC-dyT"/>
@@ -91,7 +102,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv7-kd-26h">
-                                        <rect key="frame" x="0.0" y="673" width="393" height="60"/>
+                                        <rect key="frame" x="0.0" y="643" width="393" height="60"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="8Mi-cq-RYp"/>
@@ -122,6 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="adView" destination="sv7-kd-26h" id="L3r-5J-qEV"/>
+                        <outlet property="minusView" destination="Zyl-ZO-r2L" id="QvG-ko-AgU"/>
                         <outlet property="tapView" destination="tK6-ak-msF" id="Pje-tU-Skk"/>
                         <outlet property="txtCounter" destination="Obl-zl-p7T" id="eCh-Nn-Kvg"/>
                     </connections>

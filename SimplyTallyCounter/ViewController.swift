@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     @IBOutlet var txtCounter: UILabel!
     @IBOutlet var tapView: UIView!
     @IBOutlet var adView: UIView!
+    @IBOutlet var minusView: UIView!
     var adBanner: MyAdUnit?
     var counter: Int = 0
     override func viewDidLoad() {
@@ -72,7 +73,12 @@ class ViewController: UIViewController {
                 self.doUP()
             }
         }.disposed(by: rx.disposeBag)
-        
+        minusView.rx.tapGesture().asDriver().drive { tap in
+            if tap.state == .ended {
+                self.doDown()
+            }
+        }.disposed(by: rx.disposeBag)
+
         AppDelegate.bLoadedGADMobileAds.filter{ $0 }
             .subscribe { _ in
                 self.adBanner = BannerAd(rootViewController: self, adType: .banner, forKey: "Banner", width: 320, adViewContainer: self.adView)
