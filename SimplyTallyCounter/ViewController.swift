@@ -11,6 +11,9 @@ import UIKit
 import RxGesture
 import NSObject_Rx
 import AudioToolbox
+import GoogleMobileAds
+import AdSupport
+import UserMessagingPlatform
 
 enum Vibration {
         case error
@@ -64,6 +67,65 @@ class ViewController: UIViewController {
     @IBOutlet var minusView: UIView!
     var adBanner: MyAdUnit?
     var counter: Int = 0
+    
+    private func UMPProcess() {
+         // Create a UMPRequestParameters object.
+         let parameters = UMPRequestParameters()
+         // Set tag for under age of consent. false means users are not under age
+         // of consent.
+         
+         // for debugging
+//         UMPConsentInformation.sharedInstance.reset()
+//         let debugSettings = UMPDebugSettings()
+//         debugSettings.testDeviceIdentifiers = ["FE3939C3-28F2-4666-AFAD-CF789F182AEA"]
+//         debugSettings.geography = .EEA
+//         parameters.debugSettings = debugSettings
+         
+         parameters.tagForUnderAgeOfConsent = false
+         
+           // Request an update for the consent information.
+           UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) {
+             [weak self] requestConsentError in
+             guard let self else { return }
+
+             if let consentError = requestConsentError {
+               // Consent gathering failed.
+               return print("Error: \(consentError.localizedDescription)")
+             }
+
+             UMPConsentForm.loadAndPresentIfRequired(from: self) {
+                 [weak self] loadAndPresentError in
+                 guard let self else { return }
+
+                 if let consentError = loadAndPresentError {
+                     // Consent gathering failed.
+                     return print("Error: \(consentError.localizedDescription)")
+                     
+                 }
+                 // Consent has been gathered.
+                 if UMPConsentInformation.sharedInstance.canRequestAds {
+                     _ = self.startGoogleMobileAdsSDK
+                 }
+             }
+           }
+         
+         // Check if you can initialize the Google Mobile Ads SDK in parallel
+         // while checking for new consent information. Consent obtained in
+         // the previous session can be used to request ads.
+         if UMPConsentInformation.sharedInstance.canRequestAds {
+             _ = self.startGoogleMobileAdsSDK
+             
+         }
+     }
+    // The lazy property is used instead of unavailable `dispatch_once` to
+    // initialize the Google Mobile Ads SDK only once.
+    private lazy var startGoogleMobileAdsSDK: Void = {
+        AppDelegate.bLoadedGADMobileAds.filter{ $0 }
+            .subscribe { _ in
+                self.adBanner = BannerAd(rootViewController: self, adType: .banner, forKey: "Banner", width: 320, adViewContainer: self.adView)
+            }
+            .disposed(by: rx.disposeBag)
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -79,11 +141,7 @@ class ViewController: UIViewController {
             }
         }.disposed(by: rx.disposeBag)
 
-        AppDelegate.bLoadedGADMobileAds.filter{ $0 }
-            .subscribe { _ in
-                self.adBanner = BannerAd(rootViewController: self, adType: .banner, forKey: "Banner", width: 320, adViewContainer: self.adView)
-            }
-            .disposed(by: rx.disposeBag)
+        UMPProcess()
 
         let introView = Bundle.main.loadNibNamed("IntroView", owner: self)?.first as! UIView
         tapView.addSubviewEqualSize(introView)

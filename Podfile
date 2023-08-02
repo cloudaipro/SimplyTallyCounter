@@ -6,7 +6,7 @@ target 'SimplyTallyCounter' do
   use_frameworks!
 
   # Pods for SimplyScanner
-   pod 'Google-Mobile-Ads-SDK'
+   pod 'Google-Mobile-Ads-SDK', '~> 10.8.0'
   # pod 'SwiftyAds'
 
   # Pods for SimplyTallyCounter
